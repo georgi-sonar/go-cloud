@@ -97,7 +97,7 @@ if [ -f coverage.out ] && [ $result -eq 0 ]; then
   grep -v test coverage.out > coverage2.out
   mv coverage2.out coverage.out
   bash <(curl -s https://codecov.io/bash)
-  rm coverage.out
+  # rm coverage.out
 fi
 
 # The rest of these checks are not OS-specific, so we only run them for the
