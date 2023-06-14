@@ -25,6 +25,8 @@ jobs:
       - name: Run Tests
         shell: bash
         run: 'internal/testing/runchecks.sh'
+      - name: Show the content of the coverage report
+        run: cat coverage.out
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
