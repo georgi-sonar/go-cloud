@@ -21,7 +21,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 2  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 3 # Shallow clones should be disabled for a better relevancy of analysis
       - name: Run Tests
         shell: bash
         run: 'internal/testing/runchecks.sh'
